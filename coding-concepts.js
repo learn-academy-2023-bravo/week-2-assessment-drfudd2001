@@ -72,7 +72,7 @@ const myCodingSkills = {
 // b) Verify and explain:
 
     // The method console.log(myCodingSkills.languages[0]):
-      // This logs the first element of the languages array, which is "JavaScript".
+      // This logs the first element of the languages array, which is "JavaScript", by accessing the object created in the Object literal syntax: const myCodingSkills = { insert key value pairs here }.
 
 // --------------------STRETCH: What will this log?
 
@@ -90,4 +90,4 @@ const learnStudent = new Learn("George")
 // b) Verify and explain:
 
     // The function "const learnStudent = new Learn("George") and console.log(learnStudent)":
-      // A new instance of the Learn class is created with the name property set to "George". The console.log() statement logs this new instance, which has properties student: 'George', cohort: 'Bravo', and year: 2023.
+      // Create a new instance of the Learn class is with the name property set to "George". The console.log() statement logs this new instance, which has properties student: 'George', cohort: 'Bravo', and year: 2023.
