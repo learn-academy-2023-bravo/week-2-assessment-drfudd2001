@@ -135,6 +135,7 @@ In this example, myMethod is a method that is attached to the myObject object. T
 Source: 
 
 MDN Web Docs: Functions - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+
 MDN Web Docs: Working with objects - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
 -------
@@ -182,10 +183,239 @@ MDN Web Docs: Hoisting - https://developer.mozilla.org/en-US/docs/Glossary/Hoist
 
 1. Component:
 
+A component is a reusable piece of code that encapsulates specific functionality and can be used to build larger, more complex applications. Components can be thought of as building blocks, which can be combined to create more complex and feature-rich user interfaces. In the context of modern web development, components are often implemented using frameworks such as React, Vue, or Angular, which provide a structured way to define and use components. Components can also accept input data, called "props", which can be used to customize their behavior and appearance. 
+
+Here is an example of a React component:
+
+    import React from 'react'
+
+    class MyComponent extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>Hello, World!</h1>
+                    <p>This is my first React component.</p>
+                </div>
+            )
+        }
+    }
+
+    export default MyComponent
+
+In this example, we define a class-based React component called MyComponent. The component defines a render method, which returns a simple HTML structure consisting of an h1 heading and a p paragraph. The export default statement at the bottom of the file makes the MyComponent class available for use in other parts of our application.
+
+Here is an example of a React component that accepts props:
+
+    import React from 'react'
+
+    class Greeting extends React.Component {
+        render() {
+            return <h1>Hello, {this.props.name}!</h1>
+        }
+    }
+
+    export default Greeting
+
+In this example, we define a class-based React component called Greeting. The component expects a name prop to be passed in, which it uses to render a personalized greeting message. To use this component in another part of our application, we would pass a name prop to it like so:
+
+    import React from 'react'
+    import Greeting from './Greeting'
+
+    class App extends React.Component {
+        render() {
+            return <Greeting name="Alice" />
+        }
+    }
+
+    export default App
+
+In this example, we import the Greeting component and use it in the render method of our App component. We pass a name prop of "Alice" to the Greeting component, which will render a personalized greeting message for Alice.
+
+Sources:
+
+Web Components: https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements
+
+React: https://reactjs.org/docs/components-and-props.html
+
+------
+
 2. Spread operator:
+
+In JavaScript, the spread operator (...) is a syntax feature that allows an iterable (such as an array or a string) to be expanded into individual elements in a function call, array literal, or object literal. Here are some examples of how the spread operator can be used:
+
+Expanding an array in a function call:
+
+    function myFunction(x, y, z) {
+        console.log(x, y, z)
+    }
+
+    const arr = [1, 2, 3]
+
+    myFunction(...arr) // Output: 1 2 3
+
+In this example, we have an array arr that we want to pass as arguments to the myFunction function. We can use the spread operator to expand the array into individual arguments, which are then passed to the function.
+
+Concatenating arrays:
+
+    const arr1 = [1, 2, 3]
+    const arr2 = [4, 5, 6]
+
+    const arr3 = [...arr1, ...arr2]
+
+    console.log(arr3) // Output: [1, 2, 3, 4, 5, 6]
+
+In this example, we have two arrays arr1 and arr2 that we want to concatenate into a new array arr3. We can use the spread operator to expand the elements of both arrays into a new array.
+
+Cloning an array:
+
+    const arr1 = [1, 2, 3]
+    const arr2 = [...arr1]
+
+    console.log(arr2) // Output: [1, 2, 3]
+
+In this example, we have an array arr1 that we want to clone into a new array arr2. We can use the spread operator to expand the elements of arr1 into a new array, which creates a copy of arr1.
+
+Merging objects:
+
+    const obj1 = { a: 1, b: 2 }
+    const obj2 = { c: 3, d: 4 }
+
+    const obj3 = { ...obj1, ...obj2 }
+
+    console.log(obj3) // Output: { a: 1, b: 2, c: 3, d: 4 }
+
+In this example, we have two objects obj1 and obj2 that we want to merge into a new object obj3. We can use the spread operator to expand the properties of both objects into a new object.
+
+The spread operator is a powerful and versatile feature in JavaScript that can simplify code and make it easier to work with iterables, arrays, and objects.
+
+Sources:
+
+MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+JavaScript.info: https://javascript.info/rest-parameters-spread-operator#spread-operator
+
+W3Schools: https://www.w3schools.com/js/js_array_methods.asp
+
+Codecademy: https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-arrays/cheatsheet
+
+------
 
 3. React state:
 
+In React, state is a built-in feature that allows you to manage and store data within a component. It's an object that represents the current state of a component and can be updated by calling the setState method.
+
+Here's an example of how to define and use state in a React component:
+
+    import React, { useState } from 'react'
+
+    function Counter() {
+        // Define state using the useState hook
+        const [count, setCount] = useState(0)
+
+        // Update state when button is clicked
+        function handleClick() {
+            setCount(count + 1)
+    }
+
+        // Render the component with the current state value
+        return (
+            <div>
+                <p>Count: {count}</p>
+                <button onClick={handleClick}>Increment</button>
+            </div>
+        )
+    }
+
+In this example, we use the useState hook to define a state variable count with an initial value of 0. We also define a handleClick function that updates the state by calling the setCount method with the new value. When the component is rendered, the current state value is displayed using JSX syntax within the p element. When the button is clicked, the state is updated and the component is re-rendered with the new value.
+
+State is an important concept in React and is used to build dynamic and interactive user interfaces. It allows you to keep track of changes in your application's data and update the UI accordingly.
+
+Sources:
+
+React documentation: https://reactjs.org/docs/state-and-lifecycle.html
+
+React State Hook documentation: https://reactjs.org/docs/hooks-state.html
+
+W3Schools React State tutorial: https://www.w3schools.com/react/react_state.asp
+
+freeCodeCamp React State tutorial: https://www.freecodecamp.org/news/react-state-management-101/
+
+------
+
 4. React props:
 
+In React, props (short for "properties") are a way to pass data from a parent component to a child component. They allow you to customize a component by providing it with data that it can use to render its UI. Here's an example of how to define and use props in a React component:
+
+    import React from 'react'
+
+    function Greeting(props) {
+        return <h1>Hello, {props.name}!</h1>
+    }
+
+    function App() {
+        return <Greeting name="Alice" />
+    }
+
+In this example, we define a Greeting component that takes in a prop called name. The prop value is accessed using props.name and is interpolated within the h1 element to render a personalized greeting. We then use the Greeting component within the App component and pass in a prop value of "Alice".
+
+Props are important in React because they allow you to create reusable components that can be customized for different use cases. By passing in different prop values, you can render the same component in different ways without having to write separate code for each variation. Here's another example that shows how props can be used to render a list of items:
+
+    import React from 'react'
+
+    function List(props) {
+        return (
+            <ul>
+                {props.items.map((item) => (
+                    <li key={item.id}>{item.name}</li>
+                ))}
+            </ul>
+        )
+    }
+
+    function App() {
+        const items = [
+            { id: 1, name: 'Apple' },
+            { id: 2, name: 'Banana' },
+            { id: 3, name: 'Orange' },
+        ]
+
+        return <List items={items} />
+    }
+
+In this example, we define a List component that takes in a prop called items, which is an array of objects that contain item names and IDs. We then use the map method to loop through the items array and render a list item for each item. The key prop is used to give each item a unique identifier. In the App component, we define an items array and pass it as a prop to the List component.
+
+Props are a fundamental concept in React and are used extensively in building reusable components and passing data between components.
+
+Sources:
+
+React documentation: https://reactjs.org/docs/components-and-props.html
+
+React Props tutorial on W3Schools: https://www.w3schools.com/react/react_props.asp
+
+React Props and State tutorial on freeCodeCamp: https://www.freecodecamp.org/news/react-props-and-state-explained/
+
+React Props and Children tutorial on Scrimba: https://scrimba.com/learn/reactchildren
+
+------
+
 5. DOM events:
+
+In web development, DOM events are actions or occurrences that happen in a web page and trigger specific JavaScript functions to execute in response. These events can be caused by the user, the browser, or other sources. Some common examples of DOM events include clicking on a button, submitting a form, hovering over an element, scrolling a page, resizing a window, and loading a web page. Here's an example of how to listen for a DOM event in JavaScript:
+
+    const button = document.querySelector('button')
+
+    button.addEventListener('click', () => {
+        console.log('Button clicked!')
+    })
+
+In this example, we select a button element using the document.querySelector method and then attach a click event listener to it using the addEventListener method. The event listener is a callback function that logs a message to the console when the button is clicked. There are many types of DOM events, and each one has its own set of properties and methods that can be used to interact with it.
+
+Sources:
+
+MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/Events
+
+W3Schools DOM Events tutorial: https://www.w3schools.com/js/js_events.asp
+
+freeCodeCamp DOM Events tutorial: https://www.freecodecamp.org/news/javascript-dom-events-explained/
+
+DOM Events tutorial on JavaScript.info: https://javascript.info/events
