@@ -8,7 +8,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 -------
 
-## 1. What is the difference between a parameter and an argument?
+### 1. What is the difference between a parameter and an argument?
 
 Your answer: 
 
@@ -32,7 +32,7 @@ Source:
 
 -------
 
-## 2. The JavaScript built in method .map() takes predefined parameters. What are they? Which are required and which are optional?
+### 2. The JavaScript built in method .map() takes predefined parameters. What are they? Which are required and which are optional?
 
 Your answer:  
 
@@ -52,7 +52,7 @@ Source:
 
 -------
 
-## 3. What is the difference between map and filter?
+### 3. What is the difference between map and filter?
 
 Your answer:
 
@@ -74,7 +74,7 @@ SitePoint: "JavaScript Map vs. Filter: Simplify your JavaScript Code" - https://
 
 -------
 
-## 4. What is iteration?
+### 4. What is iteration?
 
 Your answer:
 
@@ -97,7 +97,7 @@ MDN Web Docs: Iteration - https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 
 -------
 
-## 5. What is the difference between a function and a method?
+### 5. What is the difference between a function and a method?
 
 Your answer:
 
@@ -139,7 +139,7 @@ MDN Web Docs: Working with objects - https://developer.mozilla.org/en-US/docs/We
 
 -------
 
-## 6. STRETCH: What is hoisting in JavaScript?
+### 6. STRETCH: What is hoisting in JavaScript?
 
 Your answer:
 
@@ -178,7 +178,7 @@ MDN Web Docs: Hoisting - https://developer.mozilla.org/en-US/docs/Glossary/Hoist
 
 ## Looking Ahead: Terms for Next Week
 
-Research and define the following terms to the best of your ability.
+### Research and define the following terms to the best of your ability.
 
 1. Component:
 
